@@ -17,3 +17,7 @@
     vagrant up
 
 This should download a virtual machine and build it with the puppet manifest in `puppet/manifest/pi.pp`
+
+## Connecting
+
+    vagrant ssh
