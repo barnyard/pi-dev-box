@@ -19,6 +19,6 @@ class { 'apt_get_update':
 
 # --- Developement dependencies -----------------------------------------------
 
-package { ['git', 'openjdk-7-jdk']:
+package { ['git', 'openjdk-7-jdk', 'ant', 'ant-contrib']:
   ensure => installed
 }
