@@ -23,11 +23,18 @@ package { ['git', 'openjdk-7-jdk', 'ant', 'ant-contrib']:
   ensure => installed
 }
 
-# --- Pi source ---------------------------------------------------------------
+exec { 'ant-contrib linking':
+  command => 'ln -s  ../../java/ant-contrib.jar ant-contrib.jar',
+  cwd => '/usr/share/ant/lib',
+  creates => '/usr/share/ant/lib/ant-contrib.jar'
+}
 
 exec { 'create workspace':
-  command => "mkdir -p /home/vagrant/workspace"
+  command => 'mkdir -p /home/vagrant/workspace',
+  creates => '/home/vagrant/workspace'
 }
+
+# --- Pi source ---------------------------------------------------------------
 
 exec { 'clone p2p-build source':
   command => "git clone https://github.com/barnyard/p2p-build.git",
