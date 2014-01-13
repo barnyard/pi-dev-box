@@ -53,6 +53,60 @@ exec { 'clone p2p-app source':
   creates => '/home/vagrant/workspace/p2p-app'
 }
 
+exec { 'clone p2p-networkmanager source':
+  command => "git clone https://github.com/barnyard/p2p-networkmanager.git",
+  cwd => '/home/vagrant/workspace',
+  creates => '/home/vagrant/workspace/p2p-networkmanager'
+}
+
+exec { 'clone p2p-instancemanager source':
+  command => "git clone https://github.com/barnyard/p2p-instancemanager.git",
+  cwd => '/home/vagrant/workspace',
+  creates => '/home/vagrant/workspace/p2p-instancemanager'
+}
+
+exec { 'clone pi-sss source':
+  command => "git clone https://github.com/barnyard/pi-sss.git",
+  cwd => '/home/vagrant/workspace',
+  creates => '/home/vagrant/workspace/pi-sss'
+}
+
+exec { 'clone p2p-imagemanager source':
+  command => "git clone https://github.com/barnyard/p2p-imagemanager.git",
+  cwd => '/home/vagrant/workspace',
+  creates => '/home/vagrant/workspace/p2p-imagemanager'
+}
+
+exec { 'clone p2p-volumemanager source':
+  command => "git clone https://github.com/barnyard/p2p-volumemanager.git",
+  cwd => '/home/vagrant/workspace',
+  creates => '/home/vagrant/workspace/p2p-volumemanager'
+}
+
+exec { 'clone p2p-api source':
+  command => "git clone https://github.com/barnyard/p2p-api.git",
+  cwd => '/home/vagrant/workspace',
+  creates => '/home/vagrant/workspace/p2p-api'
+}
+
+exec { 'clone p2p-integration source':
+  command => "git clone https://github.com/barnyard/p2p-integration.git",
+  cwd => '/home/vagrant/workspace',
+  creates => '/home/vagrant/workspace/p2p-integration'
+}
+
+exec { 'clone pi-ops-website source':
+  command => "git clone https://github.com/barnyard/pi-ops-website.git",
+  cwd => '/home/vagrant/workspace',
+  creates => '/home/vagrant/workspace/pi-ops-website'
+}
+
+exec { 'clone p2p-demo source':
+  command => "git clone https://github.com/barnyard/p2p-demo.git",
+  cwd => '/home/vagrant/workspace',
+  creates => '/home/vagrant/workspace/p2p-demo'
+}
+
 exec { 'permissions':
   command => "chown vagrant: -R /home/vagrant/workspace"
 }
